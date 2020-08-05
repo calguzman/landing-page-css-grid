@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          0. TYPOGRAPHY AND COLORS                          */
+/* -------------------------------------------------------------------------- */
+
+// Typography
+
+body{
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  font-size: 1.5rem;
+}
+
+// Colors
+
+$primary-color:#02d1ae;
+$secondary-color: #141939;
+$gray-color:#999999;
+
+/* -------------------------------------------------------------------------- */
+/*                                 1.0 HEADER                                 */
+/* -------------------------------------------------------------------------- */
+
+.header{
+  width: 100%;
+}
+// NAV 
+.nav{
+  
+  position: relative;
+  .nav__logo{
+    grid-area: nav__logo;
+    
+    & img {
+      position: absolute;
+      top:20px;     
+      left: 40px;
+    }
+  }
+
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-areas: "nav__logo navigation language-menu";
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .navigation{
+    grid-area: navigation;
+    list-style: none;    
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color:$gray-color;
+    &__item{
+      margin-left: 20px;   
+      padding: 10px 10px 15px 10px;   
+      &--is-active{
+        @extend .navigation__item;
+        color:$secondary-color;
+        border-bottom: 3px solid $primary-color;
+      }
+    }
+    &__item:hover{
+      border-bottom: 3px solid $primary-color;
+      border-radius: 40%;
+      transition:  0.7s;
+    }
+    &__logo{
+      & img{
+        margin-left: 20px;
+        display: inline;
+      }
+    }
+  }
+  .language-menu{
+    grid-area: language-menu;
+    display: flex;
+    list-style: none;
+    &__item{
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      margin-left: 20px;
+      & a{
+        text-decoration: none;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+// HERO
+
+
+
+// Dev Utilities
+.bordered-red{
+  border:1px solid red;
+}
+.bordered-gray{
+  border:1px solid gray;
+}

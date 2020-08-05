@@ -1,0 +1,23 @@
+{
+  "name": "landingpageexample",
+  "version": "1.0.0",
+  "description": "Landing Page Example by Cguzman ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calguzman/landing-page-css-grid.git"
+  },
+  "keywords": [
+    "Landing",
+    "Page"
+  ],
+  "author": "cguzman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calguzman/landing-page-css-grid/issues"
+  },
+  "homepage": "https://github.com/calguzman/landing-page-css-grid#readme"
+}
